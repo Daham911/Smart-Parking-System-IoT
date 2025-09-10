@@ -2,7 +2,7 @@ import React from "react";
 import PillNav from "../Components/PillNav";
 import logo from "../Assets/logo.png";
 
-export const Home = () => {
+export default function About() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <PillNav
@@ -23,4 +23,4 @@ export const Home = () => {
       />
     </div>
   );
-};
+}

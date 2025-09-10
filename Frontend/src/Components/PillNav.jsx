@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const PillNav = ({
@@ -233,7 +234,7 @@ const PillNav = ({
         style={cssVars}
       >
         {isRouterLink(items?.[0]?.href) ? (
-          <Link
+          <NavLink
             to={items[0].href}
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
@@ -249,7 +250,7 @@ const PillNav = ({
             }}
           >
             <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
-          </Link>
+          </NavLink>
         ) : (
           <a
             href={items?.[0]?.href || '#'}
